@@ -33,6 +33,15 @@ void R_init_mvnfast(DllInfo *info)
 {
   R_registerRoutines(info, NULL, CallEntries, NULL, NULL);
   R_useDynamicSymbols(info, FALSE);
+
+  R_RegisterCCallable("mvnfast","dmixtCpp", (DL_FUNC) dmixtCpp);
+  R_RegisterCCallable("mvnfast","dmvtCpp", (DL_FUNC) dmvtCpp);
+  R_RegisterCCallable("mvnfast","mahaCpp", (DL_FUNC) mahaCpp);
+  R_RegisterCCallable("mvnfast","msCpp", (DL_FUNC) msCpp);
+  R_RegisterCCallable("mvnfast","rmixnCpp", (DL_FUNC) rmixnCpp);
+  R_RegisterCCallable("mvnfast","rmixtCpp", (DL_FUNC) rmixtCpp);
+  R_RegisterCCallable("mvnfast","rmvnCpp", (DL_FUNC) rmvnCpp);
+  R_RegisterCCallable("mvnfast","rmvtCpp", (DL_FUNC) rmvtCpp);
 }
 
 
